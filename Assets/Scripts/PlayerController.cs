@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+    [SerializeField]
+    float controlSpeed = 10f;
+
+    [SerializeField]
+    float xRange = 5f;
+
+    [SerializeField]
+    float yRange = 1f;
 
     // Update is called once per frame
     void Update()
@@ -15,12 +19,15 @@ public class PlayerController : MonoBehaviour
         float horizontalThrow = Input.GetAxis("Horizontal");
         float verticalThrow = Input.GetAxis("Vertical");
 
-        float xOffset = 0.1f;
-        float newXPos = transform.localPosition.x + xOffset;
+        float xOffset = horizontalThrow * Time.deltaTime * controlSpeed;
+        float rawXPos = transform.localPosition.x + xOffset;
+        float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
+
+        float yOffset = verticalThrow * Time.deltaTime * controlSpeed;
+        float rawYPos = transform.localPosition.y + yOffset;
+        float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
         transform.localPosition =
-            new Vector3(newXPos,
-                transform.localPosition.y,
-                transform.localPosition.z);
+            new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
     }
 }
