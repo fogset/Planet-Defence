@@ -284,7 +284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!320 &713630304
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -327,9 +327,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2135361255}
     m_Modifications:
+    - target: {fileID: 2035329203, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
+      propertyPath: yRange
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1734771206656390, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
       propertyPath: m_Name
-      value: StarSparrow6
+      value: Player Ship
       objectReference: {fileID: 0}
     - target: {fileID: 4197128655073178, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
       propertyPath: m_RootOrder
@@ -341,7 +345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4197128655073178, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.16
+      value: 2.81
       objectReference: {fileID: 0}
     - target: {fileID: 4197128655073178, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
       propertyPath: m_LocalPosition.z
@@ -696,7 +700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135361253}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 891.4, y: 1.62, z: 70.3}
+  m_LocalPosition: {x: 891.4, y: 4.51, z: 70.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1839311675}
